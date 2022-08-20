@@ -8310,11 +8310,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\iti\\final project\\final backend\\abobkrmoshmohm\\Ecommerce2 Api\\finalBE2\\finalBE\\EcommerceProject\\EcommerceProject.csproj",
+      "projectUniqueName": "D:\\iti\\final project\\lastdayBE\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj",
       "projectName": "EcommerceProject",
-      "projectPath": "D:\\iti\\final project\\final backend\\abobkrmoshmohm\\Ecommerce2 Api\\finalBE2\\finalBE\\EcommerceProject\\EcommerceProject.csproj",
+      "projectPath": "D:\\iti\\final project\\lastdayBE\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "D:\\iti\\final project\\final backend\\abobkrmoshmohm\\Ecommerce2 Api\\finalBE2\\finalBE\\EcommerceProject\\obj\\",
+      "outputPath": "D:\\iti\\final project\\lastdayBE\\lastdayBE\\EcommerceProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EcommerceProject.models;
+using EcommerceProject.DTO;
 
 namespace EcommerceProject.Controllers
 {
@@ -82,9 +83,24 @@ namespace EcommerceProject.Controllers
 
             return CreatedAtAction("GetOrder", new { id = order.Id }, order);
         }
+        //public Task<IActionResult<IEnumerable<Order>>> userorders([FromBody] CartDTO CartDTO)
+        //{
+        //    return Ok();
+        //}
+        [HttpPost("ordtok")]
+        public ActionResult<IEnumerable<Order>> getordersbytoken([FromBody] CartDTO CartDTO)
+        {
 
-        // DELETE: api/Order/5
-        [HttpDelete("{id}")]
+            var user = _context.Users.FirstOrDefault(d => d.token == CartDTO.token);
+            if (user != null)
+            {
+                var orders = _context.Orders.Include(d => d.OrderDetials).Where(d => d.username == user.email).ToList();
+                return orders;
+            } 
+        return BadRequest();
+        }
+            // DELETE: api/Order/5
+            [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)
         {
             var order = await _context.Orders.FindAsync(id);

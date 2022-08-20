@@ -13,7 +13,7 @@ namespace EcommerceProject.models
 
         [ForeignKey("product")]
         public int productID { get; set; }
-        [JsonIgnore]
+        //[JsonIgnore]
         public Product product { get; set; }
 
         public int Quantity { get; set; }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EcommerceProject.models;
+using EcommerceProject.DTO;
 
 namespace EcommerceProject.Controllers
 {
@@ -81,6 +82,19 @@ namespace EcommerceProject.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetCart", new { id = cart.id }, cart);
+        }
+        [HttpPost("getitemstoken")]
+        public ActionResult<IEnumerable<CartItems>> getitemstoken([FromBody] CartDTO CartDTO)
+        {
+
+            var user = _context.Users.FirstOrDefault(d => d.token == CartDTO.token);
+            var cart = _context.Carts.FirstOrDefault(d => d.username == user.email);
+            if (user != null&&cart!=null)
+            {
+                var cartitems = _context.CartItems.Include(d => d.product).Where(d => d.CartId == cart.id).ToList();
+                return cartitems;
+            }
+            return BadRequest();
         }
 
         // DELETE: api/Carts/5

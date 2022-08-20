@@ -143,7 +143,7 @@ namespace EcommerceProject.Controllers
 
             _context.Users.Add(savinguser);
             Cart usercart = new Cart() { username= inputuser.Email };
-            _context.Carts.Add(usercart);
+            _context.Add(usercart);
             try
             {
                 await _context.SaveChangesAsync();
@@ -183,8 +183,18 @@ namespace EcommerceProject.Controllers
 
             return Ok(respond);
         }
+        [HttpPost("usertoken")]
+        public async Task<ActionResult<userTypeNameDTO>> user([FromBody] CartDTO CartDTO)
+        {
 
-        private string CreateToken(user user)
+            var user = _context.Users.FirstOrDefault(d => d.token == CartDTO.token);
+            userTypeNameDTO usersend = new userTypeNameDTO() { username= user.email, fullname=user.fullname, type=user.type };
+            if (user != null) { return usersend; }
+
+            else { return BadRequest(); }
+        }
+
+            private string CreateToken(user user)
         {
             List<Claim> claims = new List<Claim>{
             new Claim(ClaimTypes.Name,user.email)

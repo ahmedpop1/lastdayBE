@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XU5ZGEyXlgGPtfUzpQF/ZPF99/Ur5K9x6G6y6Ga2nP+jvqBV1+PC6FP1LdHRqrA66CZ6rHCRea1OK2e5UsCx/A==",
+  "dgSpecHash": "0Rjgk/jmmHg1MPywJ0xTbDCMRQVJrFlLpJFA6KMAJ/2nmSywPBIhrPaNIOBih7rP4ctfiKMf87KusEiCL1L1NQ==",
   "success": true,
-  "projectFilePath": "D:\\iti\\final project\\final backend\\abobkrmoshmohm\\Ecommerce2 Api\\finalBE2\\finalBE\\EcommerceProject\\EcommerceProject.csproj",
+  "projectFilePath": "D:\\iti\\final project\\lastdayBE\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.1\\fluentvalidation.aspnetcore.11.2.1.nupkg.sha512",
