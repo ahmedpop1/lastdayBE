@@ -31,13 +31,13 @@ namespace EcommerceProject.Controllers
         [HttpGet("{orderid}")]
         public async Task<ActionResult<OrderDetials>> GetOrderDetials(int orderid)
         {
-            var order =  _context.Orders.Include(d=>d.OrderDetials).FirstOrDefault(d=>d.Id== orderid);
+            var order =  _context.OrderDetials.Include(d=>d.Product).Include(x=>x.Order).FirstOrDefault(d=>d.OrderId== orderid);
 
             if (order == null)
             {
                 return NotFound();
             }
-            else { return Ok( order.OrderDetials) ; }
+            else { return Ok( order) ; }
         }
 
 

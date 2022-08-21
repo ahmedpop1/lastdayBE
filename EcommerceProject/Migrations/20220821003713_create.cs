@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EcommerceProject.Migrations
 {
-    public partial class Init : Migration
+    public partial class create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -245,7 +245,7 @@ namespace EcommerceProject.Migrations
                     totalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     discountedTotal = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     totalProducts = table.Column<int>(type: "int", nullable: true),
-                    totalQuantity = table.Column<int>(type: "int", nullable: false),
+                    totalQuantity = table.Column<int>(type: "int", nullable: true),
                     username = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>

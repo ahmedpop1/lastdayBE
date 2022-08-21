@@ -38,10 +38,10 @@ namespace EcommerceProject.models
             base.OnModelCreating(modelBuilder);
 
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("data source=.;initial catalog=EcommerceProject;integrated security=true;MultipleActiveResultSets=true");
-            base.OnConfiguring(optionsBuilder);
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("data source=.;initial catalog=EcomerceProjectv2;integrated security=true;MultipleActiveResultSets=true");
+        //    base.OnConfiguring(optionsBuilder);
+        //}
     }
 }

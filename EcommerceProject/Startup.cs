@@ -39,7 +39,7 @@ namespace EcommerceProject
             services.AddControllers();
             //.AddNewtonsoftJson(options=>
             //options.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHandling.Ignore) ;
-            services.AddDbContext<EcommerceContext>(options => options.UseSqlServer(Configuration.GetConnectionString("EcomerceProject")));
+            services.AddDbContext<EcommerceContext>(options => options.UseSqlServer("Server=.;Database=EcomerceProjectv2;Trusted_Connection=True"));
             
 
 

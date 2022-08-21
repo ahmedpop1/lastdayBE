@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "D:\\iti\\final project\\lastdayBE\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj": {}
   },
   "projects": {
@@ -12,12 +13,27 @@
         "projectPath": "D:\\iti\\final project\\lastdayBE\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "D:\\iti\\final project\\lastdayBE\\lastdayBE\\EcommerceProject\\obj\\",
+=======
+    "G:\\back-endFinalproject\\finalv1\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj": {}
+  },
+  "projects": {
+    "G:\\back-endFinalproject\\finalv1\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\back-endFinalproject\\finalv1\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj",
+        "projectName": "EcommerceProject",
+        "projectPath": "G:\\back-endFinalproject\\finalv1\\lastdayBE\\EcommerceProject\\EcommerceProject.csproj",
+        "packagesPath": "C:\\Users\\abdoo\\.nuget\\packages\\",
+        "outputPath": "G:\\back-endFinalproject\\finalv1\\lastdayBE\\EcommerceProject\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abdoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +42,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -99,7 +116,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -111,7 +129,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -14,7 +14,7 @@ namespace EcommerceProject.models
         [ForeignKey("user")]
         public string username { get; set; }
         [JsonIgnore]
-        public user user { get; set; }
+        public virtual user user { get; set; }
         [JsonIgnore]
         public virtual ICollection<OrderDetials> OrderDetials { get; set; }
          = new HashSet<OrderDetials>();
