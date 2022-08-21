@@ -84,7 +84,7 @@ namespace EcommerceProject.Controllers
             return CreatedAtAction("GetCart", new { id = cart.id }, cart);
         }
         [HttpPost("getitemstoken")]
-        public ActionResult<IEnumerable<CartItems>> getitemstoken([FromBody] CartDTO CartDTO)
+        public ActionResult<IEnumerable<Product>> getitemstoken([FromBody] CartDTO CartDTO)
         {
 
             var user = _context.Users.FirstOrDefault(d => d.token == CartDTO.token);
@@ -92,7 +92,13 @@ namespace EcommerceProject.Controllers
             if (user != null&&cart!=null)
             {
                 var cartitems = _context.CartItems.Include(d => d.product).Where(d => d.CartId == cart.id).ToList();
-                return cartitems;
+                List<Product> products = new List<Product>();
+                foreach (var item in cartitems)
+                {
+                    item.product.ImageSrc = "http://localhost:45421/Images/"+ item.product.ImageName;
+                    products.Add(item.product);
+                }
+                return products;
             }
             return BadRequest();
         }

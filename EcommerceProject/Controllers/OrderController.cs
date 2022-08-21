@@ -95,6 +95,8 @@ namespace EcommerceProject.Controllers
             if (user != null)
             {
                 var orders = _context.Orders.Include(d => d.OrderDetials).Where(d => d.username == user.email).ToList();
+              
+
                 return orders;
             } 
         return BadRequest();
